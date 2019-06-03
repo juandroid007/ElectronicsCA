@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ServicioWCF" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioWCF_LoginEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_LoginEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_CrearEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_CrearEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_GetEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_GetEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_VerificarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_VerificarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_ModificarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_ModificarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_EliminarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_EliminarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_EliminarDeTabla_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDeTabla" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_EliminarDeTabla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDeTablaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarTipoProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarTipoProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AlterarTipoProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarTipoProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AgregarFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarFactura" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AgregarFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AgregarDetalleFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDetalleFactura" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_AgregarDetalleFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDetalleFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_GetDataTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTable" />
+  </wsdl:message>
+  <wsdl:message name="IServicioWCF_GetDataTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioWCF">
+    <wsdl:operation name="LoginEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/LoginEmpleado" message="tns:IServicioWCF_LoginEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/LoginEmpleadoResponse" message="tns:IServicioWCF_LoginEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/CrearEmpleado" message="tns:IServicioWCF_CrearEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/CrearEmpleadoResponse" message="tns:IServicioWCF_CrearEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/GetEmpleado" message="tns:IServicioWCF_GetEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/GetEmpleadoResponse" message="tns:IServicioWCF_GetEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/VerificarCliente" message="tns:IServicioWCF_VerificarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/VerificarClienteResponse" message="tns:IServicioWCF_VerificarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/ModificarEmpleado" message="tns:IServicioWCF_ModificarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/ModificarEmpleadoResponse" message="tns:IServicioWCF_ModificarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/EliminarProducto" message="tns:IServicioWCF_EliminarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/EliminarProductoResponse" message="tns:IServicioWCF_EliminarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDeTabla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/EliminarDeTabla" message="tns:IServicioWCF_EliminarDeTabla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/EliminarDeTablaResponse" message="tns:IServicioWCF_EliminarDeTabla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AlterarProducto" message="tns:IServicioWCF_AlterarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AlterarProductoResponse" message="tns:IServicioWCF_AlterarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AlterarProveedor" message="tns:IServicioWCF_AlterarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AlterarProveedorResponse" message="tns:IServicioWCF_AlterarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AlterarCliente" message="tns:IServicioWCF_AlterarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AlterarClienteResponse" message="tns:IServicioWCF_AlterarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarTipoProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AlterarTipoProducto" message="tns:IServicioWCF_AlterarTipoProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AlterarTipoProductoResponse" message="tns:IServicioWCF_AlterarTipoProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AgregarFactura" message="tns:IServicioWCF_AgregarFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AgregarFacturaResponse" message="tns:IServicioWCF_AgregarFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDetalleFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/AgregarDetalleFactura" message="tns:IServicioWCF_AgregarDetalleFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/AgregarDetalleFacturaResponse" message="tns:IServicioWCF_AgregarDetalleFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioWCF/GetDataTable" message="tns:IServicioWCF_GetDataTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioWCF/GetDataTableResponse" message="tns:IServicioWCF_GetDataTable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioWCF" type="tns:IServicioWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/LoginEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/CrearEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/GetEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarCliente">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/VerificarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/ModificarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/EliminarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDeTabla">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/EliminarDeTabla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarProducto">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AlterarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AlterarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCliente">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AlterarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarTipoProducto">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AlterarTipoProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFactura">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AgregarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDetalleFactura">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/AgregarDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap:operation soapAction="http://tempuri.org/IServicioWCF/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioWCF">
+    <wsdl:port name="BasicHttpBinding_IServicioWCF" binding="tns:BasicHttpBinding_IServicioWCF">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ServicioWCF/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
